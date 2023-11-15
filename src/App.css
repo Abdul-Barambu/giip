@@ -1,0 +1,105 @@
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;500;600;800&family=Philosopher:ital@0;1&family=Poppins:wght@200;300;400;500&display=swap');
+
+.text-giip {
+    color: #429823;
+}
+
+.button-giip {
+    background: #429823;
+}
+
+.font-mon {
+    font-family: 'Montserrat';
+    font-weight: 800;
+}
+
+.font-mon-light {
+    font-family: 'Montserrat';
+    font-weight: 500;
+}
+
+.font-mon-light-ex {
+    font-family: 'Montserrat';
+    font-weight: 400;
+}
+
+.font-mon-light-six {
+    font-family: 'Montserrat';
+    font-weight: 600;
+}
+
+.about-text {
+    margin-left: 23%;
+    margin-right: 23%;
+}
+
+.main-section {
+    margin-left: 20%;
+    margin-right: 20%;
+}
+
+.analysis-section {
+    margin-left: 3%;
+    margin-right: 3%;
+}
+
+.select-bg {
+    background: #F8F8F8;
+    box-shadow: 0px 0px 4px 0px #429823;
+
+}
+
+.tabs-bg {
+    background: #F8F8F8;
+
+}
+
+
+.charts-section {
+    margin-left: 7%;
+    margin-right: 7%;
+}
+
+@media screen and (max-width: 500px) {
+    .text-small {
+        font-size: 9px;
+    }
+
+    .text-small-extra {
+        font-size: 7px;
+    }
+
+    .text-small-ex {
+        font-size: 5.5px;
+    }
+
+    .about-text {
+        margin-left: 18%;
+        margin-right: 18%;
+    }
+
+    .card-section {
+        margin-left: 5%;
+        margin-right: 5%;
+    }
+
+    .about-text-mobile {
+        font-size: .55rem;
+    }
+
+    .main-section {
+        margin-left: 15%;
+        margin-right: 15%;
+    }
+
+    .main-section-div {
+        margin-top: 8px !important;
+    }
+
+    .charts-section {
+        margin-left: 10%;
+        margin-right: 10%;
+    }
+
+
+}
