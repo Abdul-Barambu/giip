@@ -26,6 +26,69 @@ import { MdMail } from "react-icons/md";
 import { IoSearch } from "react-icons/io5";
 
 const LandingPage = () => {
+
+    const [modal, setModal] = useState(false)
+
+    const handleModal = () => {
+        setModal(!modal)
+    }
+
+    const [one, setOne] = useState(false)
+    const [two, setTwo] = useState(false)
+    const [three, setThree] = useState(false)
+    const [four, setFour] = useState(false)
+    const [five, setFive] = useState(false)
+    const [six, setSix] = useState(false)
+
+    const handleOne = () => {
+        setOne(true)
+        setTwo(false)
+        setThree(false)
+        setFour(false)
+        setFive(false)
+        setSix(false)
+    }
+    const handleTwo = () => {
+        setOne(false)
+        setTwo(true)
+        setThree(false)
+        setFour(false)
+        setFive(false)
+        setSix(false)
+    }
+    const handleThree = () => {
+        setOne(false)
+        setTwo(false)
+        setThree(true)
+        setFour(false)
+        setFive(false)
+        setSix(false)
+    }
+    const handleFour = () => {
+        setOne(false)
+        setTwo(false)
+        setThree(false)
+        setFour(true)
+        setFive(false)
+        setSix(false)
+    }
+    const handleFive = () => {
+        setOne(false)
+        setTwo(false)
+        setThree(false)
+        setFour(false)
+        setFive(true)
+        setSix(false)
+    }
+    const handleSix = () => {
+        setOne(false)
+        setTwo(false)
+        setThree(false)
+        setFour(false)
+        setFive(false)
+        setSix(true)
+    }
+
     return (
         <div>
             <div>
@@ -144,37 +207,41 @@ const LandingPage = () => {
                             <div className='card-section about-text mt-5 lg:mt-16'>
                                 <div className='tabs-bg py-2 lg:py-5 rounded-xl'>
                                     <p className='text-giip font-mon-light-six text-center text-xs lg:text-3xl pb-2 lg:pb-8 pt-14'>What is your Industry</p>
-                                    <div className='select-bg mt-8 w-3/4 lg:w-4/5 py-3 lg:py-5 flex items-center justify-between px-5 lg:px-10 rounded-xl lg:rounded-2xl mx-auto'>
+                                    <div onClick={handleModal} className='select-bg mt-8 w-3/4 lg:w-4/5 py-3 lg:py-5 flex items-center justify-between px-5 lg:px-10 rounded-xl lg:rounded-2xl mx-auto'>
                                         <p className='text-giip font-mon-light text-sm lg:text-lg'>Industry type</p>
-                                        <p className='text-giip font-mon-light text-md lg:text-2xl'><IoChevronUpSharp /></p>
+                                        <p className='text-giip font-mon-light text-md lg:text-2xl'>{modal ? <IoChevronUpSharp /> : <FaAngleDown />}</p>
                                     </div>
                                     <div>
-                                        <div className='bg-white mt-5 w-4/5 rounded-3xl border-2 mx-auto'>
-                                            <div className='px-10 py-2 lg:py-5'>
-                                                <p className='text-neutral-400 font-mon-light'>Energy</p>
-                                            </div>
-                                            <hr />
-                                            <div className='px-10 py-2 lg:py-5'>
-                                                <p className='text-neutral-400 font-mon-light'>Agriculture</p>
-                                            </div>
-                                            <hr />
-                                            <div className='px-10 py-2 lg:py-5'>
-                                                <p className='text-neutral-400 font-mon-light'>Education</p>
-                                            </div>
-                                            <hr />
-                                            <div className='px-10 py-2 lg:py-5'>
-                                                <p className='text-neutral-400 font-mon-light'>Transportation</p>
-                                            </div>
-                                            <hr />
-                                            <div className='px-10 py-2 lg:py-5'>
-                                                <p className='text-neutral-400 font-mon-light'>Health Care</p>
-                                            </div>
-                                            <hr />
-                                            <div className='px-10 py-2 lg:py-5'>
-                                                <p className='text-neutral-400 font-mon-light'>Infrastracture</p>
-                                            </div>
+                                        {
+                                            modal && (
+                                                <div className='bg-white mt-5 w-4/5 rounded-3xl border-2 mx-auto'>
+                                                    <div className={`px-10 py-2 lg:py-5 ${one ? 'button-giip text-white' : 'text-neutral-400'}`} onClick={handleOne}>
+                                                        <p className=' font-mon-light'>Energy</p>
+                                                    </div>
+                                                    <hr />
+                                                    <div className={`px-10 py-2 lg:py-5 ${two ? 'button-giip text-white' : 'text-neutral-400'}`} onClick={handleTwo}>
+                                                        <p className='font-mon-light'>Agriculture</p>
+                                                    </div>
+                                                    <hr />
+                                                    <div className={`px-10 py-2 lg:py-5 ${three ? 'button-giip text-white' : 'text-neutral-400'}`} onClick={handleThree}>
+                                                        <p className='font-mon-light'>Education</p>
+                                                    </div>
+                                                    <hr />
+                                                    <div className={`px-10 py-2 lg:py-5 ${four ? 'button-giip text-white' : 'text-neutral-400'}`} onClick={handleFour}>
+                                                        <p className='font-mon-light'>Transportation</p>
+                                                    </div>
+                                                    <hr />
+                                                    <div className={`px-10 py-2 lg:py-5 ${five ? 'button-giip text-white' : 'text-neutral-400'}`} onClick={handleFive}>
+                                                        <p className='font-mon-light'>Health Care</p>
+                                                    </div>
+                                                    <hr />
+                                                    <div className={`px-10 py-2 lg:py-5 ${six ? 'button-giip text-white' : 'text-neutral-400'}`} onClick={handleSix}>
+                                                        <p className='text-neutral-400 font-mon-light'>Infrastracture</p>
+                                                    </div>
 
-                                        </div>
+                                                </div>
+                                            )
+                                        }
 
                                         {/* button */}
                                         <div className='text-center'>
